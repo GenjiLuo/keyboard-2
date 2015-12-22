@@ -274,10 +274,12 @@ define(function(require, exports, module){
 
 			$name_bind('abc', function(){
 				_this._$main.empty().append(_this._$lettersContent);
+				return false;
 			});
 
 			$name_bind('123', function(){
 				_this._$main.empty().append(_this._$numbersContent);
+				return false;
 			});
 		},
 
