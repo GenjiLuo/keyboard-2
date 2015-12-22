@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		html{font-size: 100px}
+		*{margin:0; padding:0}
+		.getEncrypt p{
+			white-space: normal;
+			word-break: break-all;
+			font-size: 14px;
+			line-height: 14px;
+			margin-bottom: 10px;
+		}
+		.fm-item{
+			height: 1.28rem;
+		}
+
+		/*示范样式*/
+		.keyboard{
+			border: none;
+			color: black;
+			font-size: 0.5rem;
+			line-height: 0.7rem;
+			height: 0.7rem;
+			letter-spacing: 0.03rem;
+			font-weight: 600;
+			font-family: -webkit-body;
+			padding: 0 0.12rem;
+			background-color: #f8f8f8;
+		}
+		.keyboard.active{
+			background-color: lightgrey;
+			color: darkslategray;
+		}
+		body{
+			font-size: 16px;
+		}
+	</style>
+	<link rel="stylesheet" href="./nuui.css"/>
+</head>
+<body>
+
+<div class="keyboard" id="nu-skb-demo"></div>
+
+<script src="jquery.js"></script>
+<script src="require.js"></script>
+
+<script>
+	require(["./nuui-keyboard"], function(Keyboard){
+		console.log(Keyboard);
+
+		var resp = {
+			"ec":"",
+			"em":"",
+			"data":{
+				"key":"a03db094a0ff4a2304807b6a154b12ce,4984117953607f6ab6ac3610f6a62197,1800ea738c4e903d9c6eefb35156457a,150b744c8952abd27e36b68c1cf122b9,bfe16e7ae29696a744b8f7c1438b2dce,71c736bad9f1ec11ee013b5ea9148391,2c2b49a9ec1dd5316f8363703388d137,467e23c6c832d105ce1a8d1723c99436,68c89f9f9e18c92f128dc963cdf9ce7e,eff598bed2061dc004858eb330f67782,623fd42572ed294122f12397ab0243f1,58c06455136a18fbee01b7ddf6dbb466,a4ac5c1eaca10a57ef3ce8d74b46ca20,cef47f6905825377d3034930918844b2,d5282d8e8dc6103491667632ea5671bd,00a1088340c0df78216b4f7492490303,1eba270967501379e02622001ded9277,4e04f5693f8ac90e0438a4826c54353c,688352f3c839c41f1855ca5a1fdf6585,56517b219046a74baeea8fe762166f90,909dcd06b349d318c2633de8ae43ea67,35b794f9a63d2d4b56fde2a97c94d978,e5cc15fd305e04ec4f1a5216dc4cd976,c89a0cca616fe1b6dceb6c1980ff8264,1f8ccab7ab331ccd96c6f5adacb0fef0,9a77d42bc2efdc3ba65244b625442610,73eb09cdc939a5bfdef24d7ea0b7527c,e5f6892e5cd5253b71f54e55efd11613,b75d1eddd043461ea70b0d9f5a007794,b57c8461c972ef01ce9d43767c6479e4,0004904010aa68d25fb4feb20cc3ab52,48ee2f4271a3c0d87811166a7d79615a,4b3f2797bf90068a61272c12ac711454,ebe0516e9f0b6325b2085099ea217bde,311f87a48e948f3fee776d168b791971,6bd30eb2783633ea03fbd1d8659b33fb,df2d6f7e22232d7527fa3fdcee9dbe2f,e6b08e9fd094478e608cedfafd445867,a24e0d21775433e93d3e6bc33d5e95cf,50dd09fe690debe9f42b0e5a42659add,97706fea62b4ea56d07e0aa7bd027a09,5bd4ff910896101302465fd5d41a9915,e5acd16d5495ac19475b6b410fd7c469,28a086a5013979206a8c1c4bbd663c51,9a0786de526abd7dcd064fe0accd2c63,838a0fcf4cb540129a1b28bdbdd2a41d,1017efbf326fc29aade0d7c244334dfe,bb6921d5274c04e97abdb8a4b632630d,36857b40d60c44a4a758a911aa377a89,02a549bfbe584d4aefc6845e8ffba55a,b71ecacd489f97075c0a3d283aaae106,5a1b23a74b69a0352c74b30d18669e9e,0e373737933d9737134795d18f3e7de0,5beadfe63f5bee4106ce0a95a851b7c2,83b3a44c5bb80e184576608310839900,a31bd80dd84918199fbead96b8fd2982,30a2be18cefecfc9d50871145a244777,c118cb9c8ac5d196c4f0edf507c6b240,fb438f22f42903a9783a565e562a1b6c,e9f0411fb34d53ee91d2a95a402ef1f8,290e448152c08942aa58ea24856403c2,4e0b3809dcf00869a48096c54acbdffb,4e26aad4da1004b5c3660187e67436c7,cca0e9a4c163949308f35d4830338832,6e50ca9c3111d830778a2a2d05e23b15,2f17ecca3abe3f983ab61794b426cb0e,0ced1531cb9ed0c910d898e10f714eed,cafc415b16d4b66317e0a3505e400d9e,80445a2f57809b9bfab93faad55213c9,d36b4954f70dacaeda786998c9ab6472,7acbd59ee44871a568900cb30a87435b,e132f34ffeccaa228e689b9d352b901e,f4a0f9be782d757ab8e025a8db06e442,b7208f38e69fb7d3ccf65768df450117,bde4ae89bb36375eeec320fe597a49aa,e172132a953b51fdbd0338bf38287d11,a1fc91e9ef73822cddd34f8cfa1f84ee,47b7920d3a9e4e0a7f10be26a9a59cb6,c2470eb9636bfafb3246a10343c37b3d,818a3fa7e22ee144322d731f23037139,3edca61c79a05a0930083f346f4f3c40,9eaea2cca5c73106fb9a97b5c97761ea,eea583e9cba5dffa0ce53007c56792a5,a527dd7b58a8637c30631be702f71688,7f16e74c33aca4795390c5edb0aef327,8f947628e55e524da83e20874a1dbc53,8693b9a33528546f17453ffdc9861d10,74952f1e2c67aa81e0216d3bd5451702,6d95efd742c2f76b20aa9255bcdc50c0,b5367557a9930cf03bfc0c200fcbbbbd,b69f28ab26ef790af191a8712aa29373,2388c511c898e01513f4996f9b5c6362,a67fb86ecd882e3babfc8248edfe1c50,e4a8a5f8913e701651b38e9e51299b5e",
+				"sequence":"25",
+				"id":"keyboardDemoID"
+			}
+		};
+		new Keyboard($('#nu-skb-demo'), {
+			id: resp.data.id,
+			sequence: resp.data.sequence,
+			key: resp.data.key,
+			showLast:false,
+			isRandom:true,
+			keyboardMode:1
+		});
+
+	})
+</script>
+</body>
+</html>
